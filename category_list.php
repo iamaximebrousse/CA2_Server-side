@@ -22,7 +22,9 @@ include('includes/header.php');
         </tr>
         <?php foreach ($categories as $category) : ?>
         <tr>
-            <td><?php echo $category['categoryName']; ?></td>
+            <td>
+                <?php echo $category['categoryName']; ?>
+            </td>
             <td>
                 <form action="delete_category.php" method="post"
                       id="delete_product_form">
