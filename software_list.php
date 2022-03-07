@@ -3,10 +3,10 @@
 
     // Get all categories
     $query = 'SELECT * FROM software
-              ORDER BY categoryID';
+              ORDER BY softwareID';
     $statement = $db->prepare($query);
     $statement->execute();
-    $categories = $statement->fetchAll();
+    $softwares = $statement->fetchAll();
     $statement->closeCursor();
 ?>
 <!-- the head section -->
@@ -36,7 +36,7 @@ include('includes/header.php');
     </table>
     <br>
 
-    <h2>Add Category</h2>
+    <h2>Add software</h2>
     <form action="add_software.php" method="post"
           id="add_software_form">
 
