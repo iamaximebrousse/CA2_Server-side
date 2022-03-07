@@ -1,12 +1,22 @@
 <?php
 require('database.php');
 $query = 'SELECT *
-          FROM categories
+          FROM categories 
           ORDER BY categoryID';
 $statement = $db->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll();
 $statement->closeCursor();
+
+$query2 = 'SELECT *
+          FROM software 
+          ORDER BY softwareID';
+$statement2 = $db->prepare($query2);
+$statement2->execute();
+$software = $statement2->fetchAll();
+$statement2->closeCursor();
+
+
 ?>
 <!-- the head section -->
  <div class="container">
@@ -26,13 +36,24 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
-            <label>Name:</label>
-            <input type="input" name="name">
+
+            <label>Software:</label>
+            <select name="software_id">
+            <?php foreach ($software as $softwares) : ?>
+                <option value="<?php echo $softwares['softwareID']; ?>">
+                    <?php echo $softwares['softwareName']; ?>
+                </option>
+            <?php endforeach; ?>
+            </select>
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price">
-            <br>        
+            <label>Name:</label>
+            <input type="input" name="name" id="name" onBlur="name_validation();"/><span id="name_err"></span>
+            <br> 
+            
+            <label>Description</label>
+            <textarea  cols="40" rows="5" name="description" id="description" onBlur="description_validation();"/></textarea><span id="desc_err"></span>
+            <br>  
             
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
