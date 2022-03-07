@@ -39,11 +39,10 @@ include('includes/header.php');
     <br>
 
     <h2>Add Category</h2>
-    <form action="add_category.php" method="post"
-          id="add_category_form">
+    <form action="add_category.php" method="post">          
 
         <label>Name:</label>
-        <input type="input" name="name">
+        <input type="input" name="name"id="add_category_form categories" onBlur="categories_validation();"/><span id="cat_err"></span>
         <input id="add_category_button" type="submit" value="Add">
     </form>
     <br>
