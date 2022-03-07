@@ -18,7 +18,7 @@ WHERE categoryID = :category_id";
     $statement1->execute();
     $category = $statement1->fetch();
     $statement1->closeCursor();
-    $category_name = $category['categoryName'];
+    $category_name = $category["categoryName"];
 
 // Get all categories
 $queryAllCategories = 'SELECT * FROM categories
@@ -28,9 +28,17 @@ ORDER BY categoryID';
     $categories = $statement2->fetchAll();
     $statement2->closeCursor();
 
+// Get all softwares
+$queryAllsoftwares = 'SELECT * FROM software
+ORDER BY softwareID';
+    $statement4 = $db->prepare($queryAllsoftwares);
+    $statement4->execute();
+    $softwares = $statement4->fetchAll();
+    $statement4->closeCursor();
+
 // Get records for selected category
-$queryRecords = "SELECT * FROM records
-WHERE categoryID = :category_id
+$queryRecords = "SELECT * FROM records, software
+WHERE categoryID = :category_id and software.softwareID = records.softwareID
 ORDER BY recordID";
     $statement3 = $db->prepare($queryRecords);
     $statement3->bindValue(':category_id', $category_id);
@@ -48,7 +56,7 @@ ORDER BY recordID";
     <nav>
         <ul> <?php foreach ($categories as $category) : ?>
             <li>
-                <a href=".?category_id=<?php echo $category['categoryID']; ?>"> <?php echo $category['categoryName']; ?> </a>
+                <a href=".?category_id=<?php echo $category['categoryID']; ?>"> <?php echo $category["categoryName"]; ?> </a>
             </li>
         <?php endforeach; ?>
         </ul>
@@ -62,6 +70,7 @@ ORDER BY recordID";
         <tr>
             <th>Image</th>
             <th>Name</th>
+            <th>Description</th>
             <th>Software</th>
             <th>Delete</th>
             <th>Edit</th>
@@ -72,9 +81,13 @@ ORDER BY recordID";
                 <img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
             </td>
             <td>
-                <?php echo $record['name']; ?></td>
+                <?php echo $record['name']; ?>
+            </td>
+            <td>
+                <?php echo $record['description']; ?>
+            </td>
             <td class="right">
-                <?php echo $record['software']; ?>
+                <?php echo $record['softwareName']; ?>
             </td>
             <td>
                 <form action="delete_record.php" method="post" id="delete_record_form">
@@ -98,6 +111,9 @@ ORDER BY recordID";
     </p>
     <p>
         <a href="category_list.php">Manage Categories</a>
+    </p>
+    <p>
+        <a href="software_list.php">Manage Softwares</a>
     </p>
 </section>
 <?php include('includes/footer.php'); ?>
