@@ -1,4 +1,4 @@
-![alt text](https://github.com/iamawimebrousse/CA2_Server-side/documentation/Logo.png?raw=true)
+![alt text](https://github.com/iamaximebrousse/CA2_Server-side/blob/main/Documentation/Logo.png?raw=true)
 # CA2 - Portfolio 2022 - BROUSSE Maxime
 Portfolio website made with PHP and SQL Database to share my recents works
 ### Instructions
