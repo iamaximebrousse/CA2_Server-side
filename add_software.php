@@ -1,6 +1,6 @@
 <?php
 // Get the category data
-$name = $name = filter_input(INPUT_POST, 'name');
+$name = $name = filter_input(INPUT_POST, 'software');
 
 // Validate inputs
 if ($name == null) {
