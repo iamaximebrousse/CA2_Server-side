@@ -1,74 +1,192 @@
+$primary-color: #ffffffd5;
+$secondary-color: #232A38;
 
-/* the styles for the html elements */
 
+*{
+        
+        color: $primary-color;
+}
 
+body{
+    background-color: $secondary-color;
+    width: 90%;
+    margin: auto;
+}
 .container {
     /* margin-top: 0; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 90%;
     margin: 0 auto;
-    background-color: white;
     padding: .5em 2em;
 }
 
 header {
     margin: 0;
-    width: auto;
-
-}
-header h1 {
-    margin: 0;
-    padding: .5em 0;
-    color: black;
-    font-size: 5rem;
-}
-
-aside nav ul{
+    width: 90%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 30%;
+    align-items: center;
+     
+    h1 {
+        margin: 0;
+        padding: .5em 0;
+        color: $primary-color;
+        font-size: 3rem;
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+}
+
+nav{
+    display: flex;
+    width: 120%;
+    justify-content: space-between;
+    padding: 30px 50px;
+    border-radius: 20px;
+    background: #232A38;
+    box-shadow:  10px 10px 20px #1e2430,
+                -10px -10px 20px #283040;
 
     a{
         text-decoration: none;
-        color: black;
+        color: $primary-color;
+        font-size: 0.8rem;
+        text-transform: uppercase;
     }
 }
-nav ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-nav ul li {
-    padding-bottom: 0.5em;
-}
+
 section {
-    float: left;
-    width: 800PX;
-    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    h2{
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+    h3{
+        font-size: 2rem;
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+    h4{
+        font-size: 1.7rem;
+        color: $primary-color;
+    }
+    p{
+        color: $primary-color;
+        font-size: 0.8rem;
+    }
+
+    .aff_rec{
+        padding: 50px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        border-radius: 50px;
+        background: #232A38;
+        box-shadow:  10px 10px 20px #171b24,
+                    -10px -10px 20px #2f394c;
+
+        div:nth-child(2){
+            width: 60%;
+        }
+    }
+    img{
+        width: 300px;
+        height: auto;
+        border-radius: 50px;
+    }
+
 }
+
+.btm{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+
+    a{
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
 footer {
     clear: both;
     margin-top: 1em;
     border-top: 2px solid black;
+    p {
+        text-align: right;
+        font-size: 80%;
+        margin: 1em 0;
+        color: $primary-color;
+    }
 }
-footer p {
-    text-align: right;
-    font-size: 80%;
-    margin: 1em 0;
+
+form{
+
+    input, select, textarea{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 15px 25px;
+        border: none;
+        margin: 20px;
+        border-radius: 20px;
+        background: #232A38;
+        box-shadow:  5px 5px 10px #171b24,
+                    -5px -5px 10px #2f394c;
+    }
+
+
+    input[type=submit]{
+        color: $primary-color;
+        padding: 20px 40px;
+        cursor: pointer;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.2s;
+    }
+    input[type=submit]:hover{
+        border-radius: 20px;
+        background: #232A38;
+        box-shadow: inset 5px 5px 10px #1c212c,
+                    inset -5px -5px 10px #2a3344;
+        transition: 0.5s;
+    }
+
+    span{
+        margin-left: 10px;
+    }
 }
+
+
 h1 {
     font-size: 150%;
     margin: 0;
     padding: .5em 0 .25em;
+
+    a{
+        color: $primary-color;
+    }
 }
 h2 {
     font-size: 120%;
     margin: 0;
+    display: block;
     padding: .25em 0 .5em;
 }
+
+#title_cat{
+    display: block;
+}
+
 h1, h2 {
-    color: #333;
+    color: $primary-color;
 }
 ul {
     margin: 0 0 1em 0;
@@ -79,18 +197,19 @@ li {
     padding: 0;
 }
 a {
-    color: rgb(41, 64, 124);
+    color: $primary-color;
     font-weight: bold;
+    text-decoration: none;
 }
 a:hover {
     color: rgb(208, 133, 4);
 }
 table {
-    border: 1px solid black;
+    border: 1px solid $primary-color;
     border-collapse: collapse;
 }
 td, th {
-    border: 1px dashed black;
+    border: 1px dashed $primary-color;
     padding: .2em .5em .2em .5em;
     vertical-align: top;
     text-align: left;
@@ -111,6 +230,7 @@ br {
 .margin_top_increase {
 	margin-top: 1em;	
 }
+
 
 /********************************************************************
 * Additional styles for the record Manager application
