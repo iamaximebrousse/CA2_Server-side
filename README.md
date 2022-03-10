@@ -2,7 +2,7 @@
 # CA2 - Portfolio 2022 - BROUSSE Maxime
 Portfolio website made with PHP and SQL Database to share my recents works
 
-##See application running
+## See application running
 [Portfolio 2022](https://mysql06.comp.dkit.ie/D00251731/CA2_Server-side/index.php "Portfolio Website")
 
 ### Instructions
