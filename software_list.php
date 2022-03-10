@@ -14,6 +14,7 @@
 <?php
 include('includes/header.php');
 ?>
+</header>
     <h1>software List</h1>
     <table>
         <tr>
@@ -41,11 +42,12 @@ include('includes/header.php');
           id="add_software_form">
 
         <label>Name:</label>
-        <input type="input" name="name">
-        <input id="add_sofftware_button" type="submit" value="Add">
+        <input type="input" name="software" id="software" onBlur="software_validation();"/>
+        <input id="add_software_button" type="submit" value="Add" style="cursor:not-allowed">
+        <span id="soft_err"></span>
     </form>
     <br>
-    <p><a href="index.php">Homepage</a></p>
+    <p><a href="backoffice.php">Homepage</a></p>
 
     <?php
 include('includes/footer.php');

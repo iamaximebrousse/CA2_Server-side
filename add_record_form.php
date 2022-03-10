@@ -23,6 +23,7 @@ $statement2->closeCursor();
 <?php
 include('includes/header.php');
 ?>
+</header>
         <h1>Add Record</h1>
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
@@ -48,11 +49,11 @@ include('includes/header.php');
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name" id="name" onBlur="name_validation();"/><span id="name_err"></span>
+            <input type="input" placeholder="Name..." name="name" id="name" onBlur="name_validation();"/><span id="name_err"></span>
             <br> 
             
             <label>Description</label>
-            <textarea  cols="40" rows="5" name="description" id="description" onBlur="description_validation();"/></textarea><span id="desc_err"></span>
+            <textarea  cols="40" rows="5" name="description" id="description" onBlur="description_validation();" placeholder="Description..."/></textarea><span id="desc_err"></span>
             <br>  
             
             <label>Image:</label>
@@ -60,7 +61,7 @@ include('includes/header.php');
             <br>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Add Record">
+            <input type="submit" value="Add Record" class="validate">
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>

@@ -33,6 +33,7 @@ $statement2->closeCursor();
 <?php
 include('includes/header.php');
 ?>
+</header>
         <h1>Edit Product</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
@@ -78,7 +79,7 @@ include('includes/header.php');
             <?php } ?>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Save Changes">
+            <input type="submit" value="Save Changes" style="cursor:not-allowed">
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>

@@ -14,6 +14,7 @@
 <?php
 include('includes/header.php');
 ?>
+</header>
     <h1>Category List</h1>
     <table>
         <tr>
@@ -40,13 +41,13 @@ include('includes/header.php');
 
     <h2>Add Category</h2>
     <form action="add_category.php" method="post">          
-
         <label>Name:</label>
-        <input type="input" name="name"id="add_category_form categories" onBlur="categories_validation();"/><span id="cat_err"></span>
-        <input id="add_category_button" type="submit" value="Add">
+        <input type="input" placeholder="category..." name="name"id="add_category_form" onBlur="categories_validation();"/>
+        <input id="add_category_button" type="submit" value="Add" style="cursor:not-allowed">
+        <span id="cat_err"></span>
     </form>
     <br>
-    <p><a href="index.php">Homepage</a></p>
+    <p><a href="backoffice.php">Homepage</a></p>
 
     <?php
 include('includes/footer.php');
