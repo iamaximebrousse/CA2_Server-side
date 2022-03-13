@@ -74,9 +74,6 @@ if (isset($_GET['search']) AND !empty($_GET['search'])) {
 
 <section>
 
-
-<!-- display a table of records -->
-
 <?php 
     if (isset($_GET['search']) AND !empty($_GET['search'])){
         ?> <h2>Search for : <?php echo $_GET['search'] ?></h2> <?php
