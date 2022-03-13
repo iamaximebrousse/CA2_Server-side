@@ -53,7 +53,7 @@ ORDER BY recordID";
         <nav>
             <?php foreach ($categories as $category) : ?>
                 <article>
-                    <a href=".?category_id=<?php echo $category['categoryID']; ?>"> <?php echo $category["categoryName"]; ?> </a>
+                    <a href="backoffice.?category_id=<?php echo $category['categoryID']; ?>"> <?php echo $category["categoryName"]; ?> </a>
                 </article>
                     <?php endforeach; ?>
         </nav>    

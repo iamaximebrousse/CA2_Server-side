@@ -64,7 +64,7 @@ include('includes/header.php');
             <input type="submit" value="Add Record" class="validate">
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
+        <p><a href="backoffice.php">View Homepage</a></p>
     <?php
 include('includes/footer.php');
 ?>
