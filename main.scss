@@ -44,7 +44,7 @@ nav{
     width: 120%;
     justify-content: space-between;
     padding: 30px 50px;
-    border-radius: 20px;
+    border-radius: 50px;
     background: #232A38;
     box-shadow:  10px 10px 20px #1e2430,
                 -10px -10px 20px #283040;
@@ -100,7 +100,8 @@ section {
     }
     img{
         width: 300px;
-        height: auto;
+        height: 300px;
+        object-fit: cover;
         border-radius: 50px;
     }
 
@@ -230,6 +231,48 @@ br {
 .margin_top_increase {
 	margin-top: 1em;	
 }
+/********************************************************************
+* Additional styles for the error page
+********************************************************************/
+#error{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    h1{
+        margin-top: 100px;
+        font-size: 3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    div{
+        padding: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 50px;
+        background: #232A38;
+        box-shadow:  10px 10px 20px #171b24,
+                    -10px -10px 20px #2f394c;
+        width: 60%;
+        h2{
+            font-size: 2.5rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        img{
+            margin-left: 100px;
+        }
+    }
+    footer{
+        position: absolute;
+        bottom: 50px;
+    }
+}
+
+
 
 
 /********************************************************************

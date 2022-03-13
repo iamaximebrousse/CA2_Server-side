@@ -4,17 +4,23 @@
 <!-- the head section -->
 <head>
     <title>Portfolio 2022 : Error</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="././dist/css/main.css">
 </head>
-
 <!-- the body section -->
-<body>
+<body id="error">
     <header>
-        <h1>Error on the page, try again</h1>
+        <h1><b>Error</b> on the page, <i>try again</i></h1>
     </header>
-    <main>
-        <h2 class="top">Error</h2>
-        <p><?php echo $error; ?></p>
+    <div>
+        <article>
+            <h2 class="top">Issue:</h2>
+            <p><?php echo $error; ?></p>
+        </article>
+        <article>
+            <img src="image_uploads/Error gif.gif" alt="">
+        </article>
+    </div>
+        
     </main>
 
     <footer>
