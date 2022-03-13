@@ -1,9 +1,4 @@
 <?php
-session_start();
-
-
-
-
 // Get the product data
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $software_id = filter_input(INPUT_POST, 'software_id', FILTER_VALIDATE_INT);
