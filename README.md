@@ -3,7 +3,9 @@
 Portfolio website made with PHP and SQL Database to share my recents works
 
 ## See application running
+Link to the website : 
 [Portfolio 2022](https://mysql06.comp.dkit.ie/D00251731/CA2_Server-side/index.php "Portfolio Website")
+This website is upload on the DKIT Server
 
 ### Instructions
 * Create a MySQL database called ca2_serverside in PHP MyAdmin
