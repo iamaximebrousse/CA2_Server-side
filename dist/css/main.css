@@ -6,10 +6,10 @@
 }
 
 #error h1 {
-  margin-top: 100px;
   font-size: 3rem;
   font-weight: 500;
   text-transform: uppercase;
+  margin-top: 100px;
 }
 
 #error div {
@@ -24,19 +24,18 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50px;
   background: #232A38;
   -webkit-box-shadow: 10px 10px 20px #171b24, -10px -10px 20px #2f394c;
           box-shadow: 10px 10px 20px #171b24, -10px -10px 20px #2f394c;
-  width: 60%;
+  width: 70%;
 }
 
 #error div h2 {
-  font-size: 2.5rem;
-}
-
-#error div h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 #error div p {

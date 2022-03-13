@@ -13,8 +13,8 @@
     </header>
     <div>
         <article>
-            <h2 class="top">Issue:</h2>
-            <p><?php echo $error; ?></p>
+            <h2>There was an error in the finding of the page</h2>
+            <p>Error message: <?php echo $error; ?></p>
         </article>
         <article>
             <img src="image_uploads/Error gif.gif" alt="">
