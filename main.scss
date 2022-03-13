@@ -1,10 +1,18 @@
 $primary-color: #ffffffd5;
 $secondary-color: #232A38;
+$highlight-color: rgb(208, 133, 4);
 
+@import 'includes/SCSS/error';
+@import 'includes/SCSS/form';
+@import 'includes/SCSS/records';
+
+/********************************************************************* 
+Style of the whole document
+********************************************************************/
 
 *{
         
-        color: $primary-color;
+    color: $primary-color;
 }
 
 body{
@@ -12,159 +20,6 @@ body{
     width: 90%;
     margin: auto;
 }
-.container {
-    /* margin-top: 0; */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 90%;
-    margin: 0 auto;
-    padding: .5em 2em;
-}
-
-header {
-    margin: 0;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     
-    h1 {
-        margin: 0;
-        padding: .5em 0;
-        color: $primary-color;
-        font-size: 3rem;
-        width: auto;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 900;
-        margin-bottom: 20px;
-    }
-}
-
-nav{
-    display: flex;
-    width: 120%;
-    justify-content: space-between;
-    padding: 30px 50px;
-    border-radius: 50px;
-    background: #232A38;
-    box-shadow:  10px 10px 20px #1e2430,
-                -10px -10px 20px #283040;
-
-    a{
-        text-decoration: none;
-        color: $primary-color;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-    }
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-
-    h2{
-        font-size: 2.5rem;
-        color: $primary-color;
-        margin-bottom: 50px;
-        text-transform: uppercase;
-    }
-    h3{
-        font-size: 2rem;
-        color: $primary-color;
-        text-transform: uppercase;
-    }
-    h4{
-        font-size: 1.7rem;
-        color: $primary-color;
-    }
-    p{
-        color: $primary-color;
-        font-size: 0.8rem;
-    }
-
-    .aff_rec{
-        padding: 50px;
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 100px;
-        border-radius: 50px;
-        background: #232A38;
-        box-shadow:  10px 10px 20px #171b24,
-                    -10px -10px 20px #2f394c;
-
-        div:nth-child(2){
-            width: 60%;
-        }
-    }
-    img{
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 50px;
-    }
-
-}
-
-.btm{
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-
-    a{
-        color: $primary-color;
-        text-decoration: none;
-    }
-}
-
-footer {
-    clear: both;
-    margin-top: 1em;
-    border-top: 2px solid black;
-    p {
-        text-align: right;
-        font-size: 80%;
-        margin: 1em 0;
-        color: $primary-color;
-    }
-}
-
-form{
-
-    input, select, textarea{
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 15px 25px;
-        border: none;
-        margin: 20px;
-        border-radius: 20px;
-        background: #232A38;
-        box-shadow:  5px 5px 10px #171b24,
-                    -5px -5px 10px #2f394c;
-    }
-
-
-    input[type=submit]{
-        color: $primary-color;
-        padding: 20px 40px;
-        cursor: pointer;
-        font-weight: 700;
-        text-transform: uppercase;
-        transition: 0.2s;
-    }
-    input[type=submit]:hover{
-        border-radius: 20px;
-        background: #232A38;
-        box-shadow: inset 5px 5px 10px #1c212c,
-                    inset -5px -5px 10px #2a3344;
-        transition: 0.5s;
-    }
-
-    span{
-        margin-left: 10px;
-    }
-}
-
 
 h1 {
     font-size: 150%;
@@ -180,10 +35,6 @@ h2 {
     margin: 0;
     display: block;
     padding: .25em 0 .5em;
-}
-
-#title_cat{
-    display: block;
 }
 
 h1, h2 {
@@ -203,7 +54,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: rgb(208, 133, 4);
+    color: $highlight-color;
 }
 table {
     border: 1px solid $primary-color;
@@ -221,6 +72,81 @@ form {
 br {
     clear: left;
 }
+
+.container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    padding: .5em 2em;
+}
+
+/* Header of the doc */
+header {
+    margin: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+    h1 {
+        margin: 0;
+        padding: .5em 0;
+        color: $primary-color;
+        font-size: 3rem;
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+}
+
+/* Navigation Menu */
+nav{
+    display: flex;
+    width: 120%;
+    justify-content: space-between;
+    padding: 30px 50px;
+    border-radius: 50px;
+    background: #232A38;
+    box-shadow:  10px 10px 20px #1e2430,
+                -10px -10px 20px #283040;
+
+    a{
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+}
+
+/* Bottom part of the doc */
+.btm{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+
+    a{
+        color: $primary-color;
+        text-decoration: none;
+    }
+    a:hover{
+        color: $highlight-color;
+    }
+}
+
+/* Footer */
+footer {
+    clear: both;
+    margin-top: 1em;
+    border-top: 2px solid black;
+    p {
+        text-align: right;
+        font-size: 80%;
+        margin: 1em 0;
+        color: $primary-color;
+    }
+}
+
 /* the styles for classes */
 .right {
     text-align: right;
@@ -231,49 +157,6 @@ br {
 .margin_top_increase {
 	margin-top: 1em;	
 }
-/********************************************************************
-* Additional styles for the error page
-********************************************************************/
-#error{
-    font-family: Arial, Helvetica, sans-serif;
-    
-    h1{
-        margin-top: 100px;
-        font-size: 3rem;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-    div{
-        padding: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-radius: 50px;
-        background: #232A38;
-        box-shadow:  10px 10px 20px #171b24,
-                    -10px -10px 20px #2f394c;
-        width: 60%;
-        h2{
-            font-size: 2.5rem;
-        }
-        h3{
-            font-size: 2rem;
-        }
-        p{
-            font-size: 1.5rem;
-        }
-        img{
-            margin-left: 100px;
-        }
-    }
-    footer{
-        position: absolute;
-        bottom: 50px;
-    }
-}
-
-
-
 
 /********************************************************************
 * Additional styles for the record Manager application

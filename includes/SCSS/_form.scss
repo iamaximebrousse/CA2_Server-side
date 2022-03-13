@@ -1,0 +1,38 @@
+/********************************************************************* 
+Style for the forms
+********************************************************************/
+
+form{
+
+    input, select, textarea{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 15px 25px;
+        border: none;
+        margin: 20px;
+        border-radius: 20px;
+        background: #232A38;
+        box-shadow:  5px 5px 10px #171b24,
+                    -5px -5px 10px #2f394c;
+    }
+
+    input[type=submit]{
+        color: $primary-color;
+        padding: 20px 40px;
+        cursor: pointer;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.2s;
+    }
+
+    input[type=submit]:hover{
+        border-radius: 20px;
+        background: #232A38;
+        box-shadow: inset 5px 5px 10px #1c212c,
+                    inset -5px -5px 10px #2a3344;
+        transition: 0.5s;
+    }
+
+    span{
+        margin-left: 10px;
+    }
+}
