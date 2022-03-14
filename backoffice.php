@@ -77,7 +77,9 @@ ORDER BY recordID";
                 <img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
             </td>
             <td>
-                <?php echo $record['name']; ?>
+                <b>
+                    <?php echo $record['name']; ?>
+                </b>
             </td>
             <td>
                 <?php echo $record['description']; ?>
