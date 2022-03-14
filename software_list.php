@@ -27,8 +27,7 @@ include('includes/header.php');
             <td>
                 <form action="delete_software.php" method="post"
                       id="delete_product_form">
-                    <input type="hidden" name="software_id"
-                           value="<?php echo $software['softwareID']; ?>">
+                    <input type="hidden" name="software_id" value="<?php echo $software['softwareID']; ?>">
                     <input type="submit" value="Delete">
                 </form>
             </td>
@@ -42,7 +41,7 @@ include('includes/header.php');
           id="add_software_form">
 
         <label>Name:</label>
-        <input type="input" name="software" id="software" onBlur="software_validation();"/>
+        <input type="input" name="software" id="software" onBlur="software_validation();" required>
         <input id="add_software_button" type="submit" value="Add" style="cursor:not-allowed">
         <span id="soft_err"></span>
     </form>

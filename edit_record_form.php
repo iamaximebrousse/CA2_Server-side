@@ -62,18 +62,17 @@ include('includes/header.php');
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name"
-                   value="<?php echo $records['name']; ?>" id="name" onBlur="name_validation();"/><span id="name_err"></span>
+                <input type="input" name="name" value="<?php echo $records['name']; ?>" id="name" onBlur="name_validation();" required><span id="name_err"></span>
             <br>
 
             <label>Description:</label>
-            <input type="input" name="description"
-                   value="<?php echo $records['description']; ?>"id="description" onBlur="description_validation();"/></textarea><span id="desc_err"></span>
+                <input type="input" name="description" value="<?php echo $records['description']; ?>"id="description" onBlur="description_validation();" required></textarea><span id="desc_err"></span>
             <br>
 
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
-            <br>            
+                <input type="file" name="image" accept="image/*" required>
+            <br>
+
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
             <?php } ?>

@@ -49,15 +49,15 @@ include('includes/header.php');
             <br>
 
             <label>Name:</label>
-            <input type="input" placeholder="Name..." name="name" id="name" onBlur="name_validation();"/><span id="name_err"></span>
+            <input type="input" placeholder="Name..." name="name" id="name" onBlur="name_validation();" required><span id="name_err"></span>
             <br> 
             
             <label>Description</label>
-            <textarea  cols="40" rows="5" name="description" id="description" onBlur="description_validation();" placeholder="Description..."/></textarea><span id="desc_err"></span>
+            <textarea  cols="40" rows="5" name="description" id="description" onBlur="description_validation();" placeholder="Description..." required></textarea><span id="desc_err"></span>
             <br>  
             
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*" required>
             <br>
             
             <label>&nbsp;</label>

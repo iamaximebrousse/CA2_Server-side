@@ -27,10 +27,8 @@ include('includes/header.php');
                 <?php echo $category['categoryName']; ?>
             </td>
             <td>
-                <form action="delete_category.php" method="post"
-                      id="delete_product_form">
-                    <input type="hidden" name="category_id"
-                           value="<?php echo $category['categoryID']; ?>">
+                <form action="delete_category.php" method="post" id="delete_product_form">
+                    <input type="hidden" name="category_id" value="<?php echo $category['categoryID']; ?>">
                     <input type="submit" value="Delete">
                 </form>
             </td>
@@ -42,7 +40,7 @@ include('includes/header.php');
     <h2>Add Category</h2>
     <form action="add_category.php" method="post">          
         <label>Name:</label>
-        <input type="input" placeholder="category..." name="name"id="add_category_form" onBlur="categories_validation();"/>
+        <input type="input" placeholder="category..." name="name"id="add_category_form" onBlur="categories_validation();" required>
         <input id="add_category_button" type="submit" value="Add" style="cursor:not-allowed">
         <span id="cat_err"></span>
     </form>
