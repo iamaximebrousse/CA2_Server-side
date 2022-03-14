@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=ca2_serverside';
+    $dsn = 'mysql:host=localhost;dbname=Portfolio_2022';
     $username = 'root';
     $password = 'root';
 
