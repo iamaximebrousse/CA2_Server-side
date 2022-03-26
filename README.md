@@ -9,7 +9,7 @@ This website is upload on the DKIT Server
 
 ### Instructions
 * Create a MySQL database called Portfolio_2022 in PHP MyAdmin
-* Run the code in the sql-db.txt file in PHP MyAdmin
+* Run the code in the Database_content.sql file in PHP MyAdmin
 * Move the PHP files in to your htdocs folder so Apache can process the PHP code
 * Configure the database.php file to connect to your SQL database
 
